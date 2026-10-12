@@ -1,0 +1,4 @@
+order_id,code,severity,sap_status,iq_status,sap_scheduled_at,iq_scheduled_at,message,recommended_action
+123456,IQ_NOT_READY,CRITICAL,RELEASED,PENDING,2026-10-12T23:00:00-04:00,2026-10-12T23:00:00-04:00,"SAP order is ready, but IQ is not in a ready/running/completed state.",Inspect IQ status and reprocessing history; confirm queue position with support.
+123457,MISSING_IN_IQ,CRITICAL,RELEASED,,2026-10-12T23:00:00-04:00,,SAP order is ready but missing from the IQ export near or after its scheduled time.,"Check integration delivery, IQ ingestion/reprocessing logs, and queue assignment."
+123458,SCHEDULE_MISMATCH,WARNING,RELEASED,QUEUED,2026-10-12T23:00:00-04:00,2026-10-13T00:00:00-04:00,SAP and IQ scheduled times differ beyond the configured tolerance.,"Verify approved schedule changes, timezone handling, and synchronization."
